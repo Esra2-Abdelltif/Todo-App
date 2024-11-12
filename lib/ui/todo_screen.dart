@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:todo_graph_ql/bloc/todo_bloc.dart';
 import 'package:todo_graph_ql/bloc/todo_states.dart';
+import 'package:todo_graph_ql/ui/widget/add_todo_widget.dart';
 import 'package:todo_graph_ql/ui/widget/cart_widget.dart';
 
 class TodoScreen extends StatelessWidget {
@@ -10,7 +11,7 @@ class TodoScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // floatingActionButton: addToDoWidget(),
+      floatingActionButton: AddToDoWidget(),
         body: BlocConsumer<ToDoBloc, TodoStates>(
       listener: (context, state) {
         if (state is ToDoErrorStates) {
