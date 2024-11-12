@@ -15,7 +15,10 @@ class AddToDoWidget extends StatelessWidget {
     var contentController =TextEditingController();
     final todoList=BlocProvider.of<ToDoBloc>(context);
 
-    return FloatingActionButton(onPressed: (){
+    return FloatingActionButton(
+      backgroundColor: Colors.red,
+        child: Icon(Icons.add),
+        onPressed: (){
       showDialog(
         context: context,
         builder: (BuildContext dialogContext) {

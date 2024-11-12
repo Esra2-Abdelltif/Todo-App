@@ -65,7 +65,7 @@ class TodoRepo {
     final request = {
       'query': '''
          mutation deleteTodo(\$id:String,){
-         addTodo(id:\$id,){
+         deleteTodo(id:\$id,){
          id,
          }
          }
